@@ -39,7 +39,7 @@ export async function handler(event) {
 
   const d = new Date();
   const day = d.toISOString().slice(0, 10);
-  const key = `hollister-hangouts/${day}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${slug(name)}.jpg`;
+  const key = `new-balance/${day}/${Date.now()}-${Math.random().toString(36).slice(2, 8)}-${slug(name)}.jpg`;
 
   try {
     await s3.send(new PutObjectCommand({
